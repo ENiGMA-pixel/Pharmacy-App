@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/aaa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/abc"
+        android:textColor="@color/pink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart= "12dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="Health Articles"
+        android:textSize= "20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="match_parent"
+        android:textColor="@color/pink"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/abc"
+        android:padding="16dp"
+        android:text="Gym and tonic: Why working out makes you a sleeping beauty"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_title">
+
+    <TextView
+        android:id="@+id/article_content"
+        android:textColor="@color/pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Sleep and exercise are said to be perfect bedfellows. A good night’s sleep can enhance workout performance, reduce the risk of injuries, and keep the body and muscles healthy. Lack of sleep, on the other hand, can weaken one’s immunity
+            Raj Sipani, a 35-year-old entrepreneur and fitness enthusiast from Noida, Uttar Pradesh, recalls how he experienced the benefits of an excellent sleep pattern once he started working out regularly.
+            “I have been working out for more than ten years now, and what began as a hobby has now become my passion,” Sipani says. “I go to the gym every day — mostly in the evenings after work ­— not just for fitness but [also because] it reduces the day-to-day stress and tension. I usually manage to get a good, deep sleep after my workouts as my body feels light and fresh, and the endorphins contribute to my happy state the next day.” " />
+
+
+</ScrollView>
+
+
+
+
+</RelativeLayout>

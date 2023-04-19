@@ -12,6 +12,18 @@
         android:theme="@style/Theme.PharmacyApp"
         tools:targetApi="31">
         <activity
+            android:name=".articles"
+            android:exported="false" />
+        <activity
+            android:name=".BuyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuydetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".labActivity"
+            android:exported="false" />
+        <activity
             android:name=".Dietitian"
             android:exported="false" />
         <activity

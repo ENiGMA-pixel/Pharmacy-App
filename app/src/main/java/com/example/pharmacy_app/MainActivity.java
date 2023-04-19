@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     CardView logout;
     CardView findDoctor;
+    CardView article;
+    CardView labtest;
+    CardView buymedicine;
+
+
 
     TextView textView;
     FirebaseUser user;
@@ -29,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         logout = findViewById(R.id.logout);
         findDoctor = findViewById(R.id.findDoctor);
+        article = findViewById(R.id.article);
+        labtest = findViewById(R.id.labtest);
+        buymedicine = findViewById(R.id.buymedicine);
         user = mAuth.getCurrentUser();
 
         if(user == null) {
@@ -41,6 +49,33 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), FindDoctor.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        article.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), articles.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        buymedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BuyActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        labtest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), labActivity.class);
                 startActivity(intent);
                 finish();
             }

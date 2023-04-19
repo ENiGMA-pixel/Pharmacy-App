@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuydetailActivity"
+    android:background="@drawable/img">
+
+
+    <TextView
+        android:id="@+id/BMDtextview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medicine Details"
+        android:textColor="@color/purple_500"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+
+    <EditText
+        android:id="@+id/edmultiline"
+        android:layout_width="345dp"
+        android:layout_height="398dp"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:padding="20dp"
+        android:text="hii"
+        app:layout_constraintBottom_toTopOf="@+id/btngotocartBMD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BMDtextview1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btngotocartBMD"
+        android:layout_width="338dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/add_to_cart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnbackBMD"
+        android:layout_width="342dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:text="Back"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btngotocartBMD"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/CostBMD"
+        android:layout_width="107dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="6dp"
+        android:text="Text"
+        app:layout_constraintBottom_toTopOf="@+id/btngotocartBMD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edmultiline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
