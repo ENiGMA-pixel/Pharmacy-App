@@ -9,19 +9,20 @@
 
     <TextView
         android:id="@+id/Payment"
-        android:layout_width="381dp"
-        android:layout_height="43dp"
-        android:textStyle="bold"
+        android:layout_width="245dp"
+        android:layout_height="41dp"
         android:layout_marginTop="28dp"
         android:text="Payment Gateway"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="381dp"
         android:layout_height="409dp"
         android:layout_below="@id/Payment"
@@ -35,80 +36,124 @@
         app:layout_constraintStart_toStartOf="match_parent"
         app:layout_constraintTop_toBottomOf="@+id/Payment"
         app:layout_constraintVertical_bias="0.536">
+
         <androidx.cardview.widget.CardView
             android:id="@+id/UPI"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_gravity="fill"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
             android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
-            app:cardCornerRadius="10dp"
+            android:layout_gravity="fill"
             app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
-            app:cardUseCompatPadding="true"
-            >
+            app:cardUseCompatPadding="true">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="30dp"
                     android:text="Pay using UPI"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:padding="30dp" />.
+                    android:textStyle="bold" />.
+
                 <ImageView
-                    android:layout_width="200dp"
+                    android:layout_width="230dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/upi"/>.
+                    android:src="@drawable/upi" />.
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/Netbanking"
-            android:layout_column="0"
-            android:layout_row="1"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_gravity="fill"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
             android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
-            app:cardCornerRadius="10dp"
+            android:layout_gravity="fill"
             app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
-            app:cardUseCompatPadding="true"
-            >
+            app:cardUseCompatPadding="true">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="20dp"
                     android:text="Pay using Net Banking"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:padding="20dp"/>.
+                    android:textStyle="bold" />.
+
                 <ImageView
-                    android:layout_width="200dp"
+                    android:layout_width="180dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/net"/>.
+                    android:src="@drawable/net" />.
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Pay using Credit/Debit Card"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />.
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cardpay" />.
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
     </GridLayout>
 
     <Button
@@ -117,9 +162,22 @@
         android:layout_height="58dp"
         android:layout_marginBottom="84dp"
         android:text="Back to Cart"
+        android:background="@drawable/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="NotSibling" />
+        tools:ignore="NotSibling"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="79dp"
+        android:layout_height="78dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="10dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
