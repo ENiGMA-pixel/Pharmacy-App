@@ -37,6 +37,39 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/pink"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="18dp"
+                        android:src="@drawable/flask" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="Lab Test"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
                 android:id="@+id/article"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -70,6 +103,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/findDoctor"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -87,14 +121,14 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="18dp"
-                        android:src="@drawable/flask" />
+                        android:src="@drawable/consulting" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/googlesans_bold"
-                        android:text="Lab Test"
+                        android:text="Find Doctor"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -153,14 +187,14 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="18dp"
-                        android:src="@drawable/consulting" />
+                        android:src="@drawable/trolley" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/googlesans_bold"
-                        android:text="Find Doctor"
+                        android:text="Cart"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -169,6 +203,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/logout"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -200,40 +235,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/pink"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="18dp"
-                        android:src="@drawable/trolley" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/googlesans_bold"
-                        android:text="Cart"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
 
         </GridLayout>
 

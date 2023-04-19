@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -14,7 +15,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
-    Button button;
+    CardView logout;
+    CardView findDoctor;
+
     TextView textView;
     FirebaseUser user;
 
@@ -24,22 +27,26 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
-        button = findViewById(R.id.logout);
-        textView = findViewById(R.id.user_details);
+        logout = findViewById(R.id.logout);
+        findDoctor = findViewById(R.id.findDoctor);
         user = mAuth.getCurrentUser();
 
         if(user == null) {
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
             finish();
-        } else{
-            if(user.getEmail() == null)
-                textView.setText(user.getPhoneNumber());
-            else
-                textView.setText(user.getEmail());
         }
 
-        button.setOnClickListener(new View.OnClickListener() {
+        findDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), FindDoctor.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAuth.signOut();
